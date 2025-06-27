@@ -1,0 +1,39 @@
+Task 4: Setup and Use a Firewall on Windows
+
+Objective:
+Configure basic firewall rules using Windows Firewall to block and allow specific network traffic.
+
+Steps Performed:
+1. Opened Windows Defender Firewall with Advanced Security.
+2. Created a new Inbound Rule to block TCP traffic on port 23 (Telnet).
+3. Installed the Telnet client using the DISM command:
+   dism /online /Enable-Feature /FeatureName:TelnetClient
+4. Tested the rule using Command Prompt:
+   telnet localhost 23
+   Result: "Could not open connection to the host" — confirmed port 23 is blocked.
+5. Took a screenshot of the Telnet test and the firewall rule.
+6. Removed the firewall rule to restore the system's original state.
+
+Tools Used:
+- Windows 10
+- Windows Defender Firewall (GUI)
+- Command Prompt (Admin)
+- DISM command to install Telnet
+- Telnet client for testing
+
+Outcome
+Successfully demonstrated how to create and test firewall rules on Windows.
+Blocked Telnet (port 23), verified it was blocked, and then restored the system.
+Blocked Telnet (port 22), verified it was blocked, and then restored the system.
+
+Screenshots:
+------------
+Included in the 'screenshots' folder:
+- telnet-blocked.png (shows failed connection)
+- firewall-rule.png (shows Inbound Rule for port 23)
+
+conclusion:
+This task provided hands-on experience with configuring Windows Firewall to manage network traffic. By creating rules to block Telnet (port 23) and verifying their effects using the Telnet client, I learned how to apply, test, and remove firewall rules effectively. The exercise reinforced key security concepts such as port-based filtering and the importance of blocking insecure protocols. This foundational skill is essential for protecting systems from unauthorized access and securing network communication.
+
+
+
